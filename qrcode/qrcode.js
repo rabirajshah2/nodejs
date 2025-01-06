@@ -1,12 +1,7 @@
-const qrcode= require("qrcode");
+const qrcode = require("qrcode");
 
-const generateQR = async (url) => {
-    try {
-      const result=(await qrcode.toString(url,{type:'terminal'}));
-      return result;
-    } catch (err) {
-      console.error(err)
-    }
-  }
-  module.exports={generateQR};
-
+const generateQr =  async(url) =>{
+    const res = await qrcode.toString(url,{type : 'terminal'});
+    return res;
+}
+module.exports ={generateQr}

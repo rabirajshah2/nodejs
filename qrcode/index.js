@@ -1,7 +1,8 @@
-const {generateQR} = require('./qrcode')
+const {generateQr} = require("./qrcode");
+ 
+console.log(generateQr("https://rabiraj.com.np"));
 
-const main = async () => {
-    const result = await generateQR("https://rabirajsah.com.np");
-    console.log(result);
+const main = async () =>{
+    console.log(await generateQr("https://rabiraj.com.np"));
 }
 main();
